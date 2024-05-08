@@ -1,0 +1,37 @@
+<p>chart-details works!</p>
+<hr/>
+<div *ngIf="chart != undefined && chart != null">
+  <div>
+    <label><b>Id: </b></label> {{ chart.id }}
+  </div>
+  <div>
+    <label><b>Title: </b></label> {{ chart.title }}
+  </div>
+
+  <div>
+    <label><b>type: </b></label> {{ chart.type }}
+  </div>
+  <div>
+    <label><b>x_axis: </b></label> {{ chart.x_axis }}
+  </div>
+  <div>
+    <label><b>y_axis: </b></label> {{ chart.y_axis }}
+  </div>
+  
+  <div>
+    <label><b>creationDate: </b></label> {{ chart.creationDate }}
+  </div>
+  <div>
+    <label><b>creator_id: </b></label> {{ chart.creator_id }}
+  </div>
+  <div>
+    <label><b>update_date: </b></label> {{ chart.update_date }}
+  </div>
+  <div>
+    <label><b>updator_id: </b></label> {{ chart.updator_id }}
+  </div>
+
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Chart List</button><br>

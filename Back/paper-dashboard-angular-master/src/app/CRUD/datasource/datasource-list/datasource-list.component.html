@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-8">
+      <!-- Card for editing profile -->
+      <!-- ... Existing card content ... -->
+  
+      <!-- New card for displaying dashboard list -->
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Datasource List</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+                <th>type</th>
+                <th>connection_port</th>
+                <th>Actions</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let datasource of datasources">
+                  <td>{{ datasource.type }}</td>
+                  <td>{{ datasource.connection_port }}</td>
+                  <td>
+                    <button (click)="deleteDatasource(datasource.id)" class="btn btn-danger">Delete</button>
+                    <button (click)="updateDatasource(datasource.id)" class="btn btn-info" style="margin-left: 10px">Edit</button>
+                    <button (click)="datasourceDetails(datasource.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="btn btn-primary" (click)="createDatasource()">Add New Datasource</button>
+          <button class="m-3 btn btn-sm btn-danger" (click)="deleteAllDatasources()">Remove All</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  

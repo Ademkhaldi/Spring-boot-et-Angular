@@ -1,0 +1,30 @@
+<p>dashboard-details works!</p>
+<hr/>
+<div *ngIf="datasource != undefined && datasource != null">
+  <div>
+    <label><b>Id: </b></label> {{ datasource.id }}
+  </div>
+  <div>
+    <label><b>type: </b></label> {{ datasource.type }}
+  </div>
+  <div>
+    <label><b>connection_port: </b></label> {{ datasource.connection_port }}
+  </div>
+
+  <div>
+    <label><b>creationDate: </b></label> {{ datasource.creationDate }}
+  </div>
+  <div>
+    <label><b>creator_id: </b></label> {{ datasource.creator_id }}
+  </div>
+  <div>
+    <label><b>update_date: </b></label> {{ datasource.update_date }}
+  </div>
+  <div>
+    <label><b>updator_id: </b></label> {{ datasource.updator_id }}
+  </div>
+
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Dashboard List</button><br>

@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-md-8">
+      <!-- Card for editing profile -->
+      <!-- ... Existing card content ... -->
+  
+      <!-- New card for displaying dashboard list -->
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Chart List</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+                <th>title</th>
+                <th>type</th>
+                <th>x_axis</th>
+                <th>y_axis</th>
+                <th>Actions</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let chart of charts">
+                  <td>{{ chart.title }}</td>
+                  <td>{{ chart.type }}</td>
+                  <td>{{ chart.x_axis }}</td>
+                  <td>{{ chart.y_axis }}</td>
+
+                  <td>
+                    <button (click)="deleteChart(chart.id)" class="btn btn-danger">Delete</button>
+                    <button (click)="updateChart(chart.id)" class="btn btn-info" style="margin-left: 10px">Edit</button>
+                    <button (click)="chartDetails(chart.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="btn btn-primary" (click)="createChart()">Add New </button>
+          <button class="m-3 btn btn-sm btn-danger" (click)="deleteAllCharts()">Remove All</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  
